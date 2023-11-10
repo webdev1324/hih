@@ -1,0 +1,281 @@
+/* CSS code for a general store website */
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+/* Resetting default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Using variables for colors */
+:root {
+  --primary-color: #383838;
+  --secondary-color: #f5f5f5;
+  --accent-color: #ff9900;
+}
+
+/* Styling the body element */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+/* Styling the navigation bar */
+.navigation {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  z-index: 9;
+}
+
+.nav {
+  padding: 10px 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin: 20px;
+}
+
+.logo span {
+  color: var(--primary-color);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: var(--accent-color);
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+.right-nav a {
+  margin-left: 20px;
+}
+
+.right-nav a img {
+  width: 30px;
+}
+
+/* Styling the header section */
+.header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side {
+  width: 50%;
+}
+
+.left-side h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.left-side p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.right-side {
+  width: 50%;
+}
+
+.right-side img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Styling the main section */
+.main {
+  padding: 40px 0;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.col {
+  position: relative;
+}
+
+.col img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Styling the footer section */
+.footer {
+  padding: 40px 0;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side {
+  width: 40%;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.logo span {
+  color: var(--secondary-color);
+}
+
+.left-side p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-links a {
+  margin-right: 10px;
+}
+
+.social-links a i {
+  font-size: 24px;
+  color: var(--secondary-color);
+}
+
+.social-links a i:hover {
+  color: var(--accent-color);
+}
+
+.right-side {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section {
+  width: 30%;
+}
+
+.section h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+/* Adding media queries for responsiveness */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .right-nav {
+    margin-top: 10px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+  }
+
+  .right-side img {
+    height: 400px;
+  }
+
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
